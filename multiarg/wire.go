@@ -6,7 +6,7 @@ import (
 	"github.com/google/wire"
 )
 
-func ProvideCar(c, s string) Car {
+func ProvideCar(c Color, s Style) Car {
 	wire.Build(NewCar, NewBody, NewWheel)
 	return Car{}
 }
