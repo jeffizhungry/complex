@@ -1,0 +1,39 @@
+digraph {
+	rankdir=RL;
+	graph [compound=true];
+	
+		subgraph cluster_0 {
+			label = "main";
+			constructor_0 [shape=plaintext label="NewCar"];
+			
+			"main.Car" [label=<main.Car>];
+			
+		}
+		
+			constructor_0 -> "main.Body" [ltail=cluster_0];
+		
+		
+		subgraph cluster_1 {
+			label = "main";
+			constructor_1 [shape=plaintext label="NewBody"];
+			
+			"main.Body" [label=<main.Body>];
+			
+		}
+		
+			constructor_1 -> "main.Wheel" [ltail=cluster_1];
+		
+		
+		subgraph cluster_2 {
+			label = "main";
+			constructor_2 [shape=plaintext label="NewWheel"];
+			
+			"main.Wheel" [label=<main.Wheel>];
+			
+		}
+		
+			constructor_2 -> "string" [ltail=cluster_2];
+		
+		
+	
+}
